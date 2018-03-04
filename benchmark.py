@@ -45,4 +45,4 @@ if __name__ == '__main__':
     print('write_time: {} means {}'.format(write_time, write_time / 9.470535683998605))
     print('write_time_usb: {} means {}'.format(write_time_usb, write_time_usb / 14.60818093099806))
     print('read_time: {} means {}'.format(read_time, read_time / 0.07656324999697972))
-    print('read_time_usb: {} means {}'.format(read_time_usb, read_time_usb / 0.23774331700406037))
+    print('read_time_usb: {} means {}'.format(read_time_usb, read_time_usb / 0.059092697003507055))
