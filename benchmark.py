@@ -49,9 +49,9 @@ if __name__ == '__main__':
     read_time = timeit.timeit("read_stuff()", setup="from __main__ import read_stuff", number=1)
     read_time_usb = timeit.timeit("read_stuff_usb()", setup="from __main__ import read_stuff_usb", number=1)
 
-    print('add_time:\t\t{:.3f} s\t\twhich is {:.2f} x longer'.format(add_time, add_time / 0.6363586450024741))
-    print('numpy_time:\t\t{:.3f} s\twhich is {:.2f} x longer'.format(numpy_time, numpy_time / 15.0))
-    print('write_time:\t\t{:.3f} s\twhich is {:.2f} x longer'.format(write_time, write_time / 9.470535683998605))
+    print('add_time:\t\t{:.3f} s\t\twhich is {:.2f} x longer <-- just adding numbers'.format(add_time, add_time / 0.6363586450024741))
+    print('numpy_time:\t\t{:.3f} s\twhich is {:.2f} x longer <-- lots of memory'.format(numpy_time, numpy_time / 15.0))
+    print('write_time:\t\t{:.3f} s\twhich is {:.2f} x longer <-- writing to fs, compared to ENCRYPTED disk'.format(write_time, write_time / 9.470535683998605))
     print('write_time_usb:\t\t{:.3f} s\twhich is {:.2f} x longer'.format(write_time_usb, write_time_usb / 14.60818093099806))
     print('read_time:\t\t{:.3f} s\t\twhich is {:.2f} x longer'.format(read_time, read_time / 0.07656324999697972))
-    print('read_time_usb:\t\t{:.3f} s\t\twhich is {:.2f} x longer (<-- unstable, irrelevant)'.format(read_time_usb, read_time_usb / 0.27))
+    print('read_time_usb:\t\t{:.3f} s\t\twhich is {:.2f} x longer <-- unstable, irrelevant'.format(read_time_usb, read_time_usb / 0.27))
