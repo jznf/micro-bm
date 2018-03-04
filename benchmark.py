@@ -18,12 +18,16 @@ def write_stuff():
 
 def read_stuff():
     with open('stuff.txt', 'r') as stuff:
-        read_stuff = stuff.readline()
-        print(read_stuff[:20])
-        print(read_stuff[-20:])
+        stuff_to_read = stuff.readline()
+        print(stuff_to_read[:20])
+        print(stuff_to_read[-20:])
 
 
 if __name__ == '__main__':
-    print(timeit.timeit("add_stuff()", setup="from __main__ import add_stuff", number=1))
-    print(timeit.timeit("write_stuff()", setup="from __main__ import write_stuff", number=1))
-    print(timeit.timeit("read_stuff()", setup="from __main__ import read_stuff", number=1))
+    add_time = timeit.timeit("add_stuff()", setup="from __main__ import add_stuff", number=1)
+    write_time = timeit.timeit("write_stuff()", setup="from __main__ import write_stuff", number=1)
+    read_time = timeit.timeit("read_stuff()", setup="from __main__ import read_stuff", number=1)
+
+    print('{} means {}'.format(add_time, add_time / 0.6363586450024741))
+    print('{} means {}'.format(write_time, write_time / 9.470535683998605))
+    print('{} means {}'.format(read_time, read_time / 0.08480850599880796))
